@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>More Information</title>
+        <link rel="icon" href="../media/logo.png" type="image/icon" >
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div class = "container">
+            <div class = "navbar">
+                <a href="https://icaminajatt.github.io/" target=_blank><img src = "../media/logo.png" class = "logo"></a>  
+                <i id="moon" class="fas fa-moon fa-2x"></i>
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="../index.html">&nbsp; Home &nbsp;</a> |</li>
+                        <li><a href="about.html">&nbsp; About Me &nbsp;</a> |</li>
+                        <li><a href="education.html">&nbsp; Educational Background &nbsp;</a> |</li>
+                        <li><a href="work.html">&nbsp; Work Experience &nbsp;</a> |</li>
+                        <li><a href="funfacts.html">&nbsp; Fun Facts &nbsp;</a> |</li>
+                        <li><a href="likes.html">&nbsp; Likes and Hobbies &nbsp;</a> |</li>
+                        <li><a href="more.html">&nbsp; More Info &nbsp;</a></li>
+                    </ul>
+                </nav>
+                <img src="../media/menu.png" class="menu" onclick="togglemenu()">
+            </div>
+
+            <H1 class="title retain">More Information</H1>
+            <hr class="divider">
+            <br>
+            <div class="add-info">
+
+                <p>For more information about our trainee, <a href="about.html">Jatt</a></p>
+                
+                <p>Be her friend on <a href="https://facebook.com/icaminajatt" target=_blank>Facebook.</a><br>
+                Follow her everyday life on <a href="https://twitter.com/Jathynelaaa/" target=_blank>Twitter</a> and <a href="https://instagram.com/jathynelaaa/" target=_blank>Instagram</a>.<br>
+                Connect to her professional life on <a href="https://linkedin.com/in/jatticamina" target=_blank>LinkedIn</a>.</p>
+            
+                <div class="comments">
+                <h3 class="intro">OUR CUSTOMERS LOVE WHAT WE DO</h3>
+                <p class="parag">And we would also love to hear your stories and experiences.
+                   <br> Share your thoughts using the form below.
+                </p>
+
+                <form>
+                    <label>Name:</label><br>
+                    <input input name="name" id="name" type="text" class="nameValue" onblur="validateName();" placeholder="Enter 2-50 characters"><br>
+                    <p class="feedback_col"><span id="namePrompt"></span></p>
+                    
+                    <!-- <label>Email:</label><br>
+                    <input name="email" id="email" type="text" onblur="validateEmail();" placeholder="Enter valid email"><br>
+                    <p class="feedback_col"><span id="emailPrompt"></span></p> -->
+
+                    <!-- <label>Phone:</label><br>
+                    <input input name="phone" id="phone" type="text" onblur="validateNum();" placeholder="Enter 11-digit number"><br>
+                    <p class="feedback_col"><span id="phonePrompt"></span></p> -->
+
+                    <label>Company:</label><br>
+                    <input input name="company" id="company" type="text" class = "companyValue" placeholder="Enter company name"><br>
+                    
+                    <label>Job Title:</label><br>
+                    <input input name="job" id="job" type="text" class = "jobValue" placeholder="Enter position"><br>
+                    
+                    <!-- <label>Picture to show:</label><br><br>
+                    <input type="radio" name="test-pic" id="test-pic" value="male" checked><img class="retain" src="../media/male.png">
+                    <input type="radio" name="test-pic" id="test-pic" value="female"><img class="retain" src="../media/female.png"> -->
+                    
+                    <label>Birthday:</label><br><br>
+                    <input type="date" class = "dateValue"><br>
+
+                    <br>
+                    <label>Leave a comment:</label><br> 
+                    <textarea name="testimonial" id="testimonial" type="text" rows="10" class = "commentValue" placeholder="Comments / Suggestion"></textarea><br>
+                    
+                    <!-- <button onclick="saveToLocalStorage()">Save: </button> -->
+                    
+                </form>
+                <br>
+                <!-- <button class="submit" type="button" onclick="information();">SUBMIT</button> -->
+                <!-- <button class="submit" type="button">SUBMIT</button> -->
+                <button class="save" onclick="saveToLocalStorage()">Save: </button>
+
+                </div>
+
+                <br>
+
+                <div class="add">
+                    <img src="../media/undraw_subscribe_vspl.png" width=40% class="pic retain lightpic">
+                    <img src="../media/sub.png" width=40% class="pic retain darkpic">
+                </div>
+
+                <hr class="divider">
+                <h1 class="what">"what people say"</h1>
+                <hr class="divider">
+                <br><br>
+
+                <div id="form"></div>
+                <template id="article">
+                    <div class = "info">
+                        <div class = "info-row">
+                            <div class= "disp-pic">
+                                <img class= "disp-pic retain" src="../media/user.jpg">
+                            </div>
+                            <div class="disp-info">
+                                <h2 class = "nameForm"></h2>
+                                <div><em><span class="jobForm"></span></em>, <span class="companyForm"></span></div>
+                                <strong><p class = "commentForm"></p></strong>
+                                <small class = "dateForm"></small>
+                            </div>
+                        </div>
+
+                        <div class="openBtn">
+                            <button class="openButton" id="btnEdit" onclick="openForm(this.id)">Edit Info</button>
+                          </div>
+                          <div class="loginPopup">
+                            <div class="formPopup" id="popupForm">
+                              <form class="formContainer">
+                                <h2>EDIT INFORMATION</h2>
+                                <input type="hidden" id="keyInput" class="keyValue"></input>
+                                <label>Name:</label><br>
+                                <input type="text" id="nameInput" class = "nameValue"></input><br>
+                                <label>Job Title:</label><br>
+                                <input type="text" id="jobInput" class = "jobValue"></input><br>
+                                <label>Company:</label><br>
+                                <input type="text" id="companyInput" class = "companyValue"></input><br>
+                                <label>Birthday:</label><br>
+                                <input type="date" id="dateInput" class = "dateValue"></input><br><br>
+                                <label>Comment:</label><br>
+                                <textarea type="text" rows="5" id="commentInput" class = "commentValue"></textarea><br><br>
+                                <button type="submit" id="btnSave" class="edit saveCol retain" onclick="updateLocalStorage(this.id)">Save</button>
+                                <button type="submit" id="btnDelete" class="edit delCol retain" onclick="deleteInfo(this.id)">Delete</button>
+                                <button type="button" class="cancel edit cancelCol retain" onclick="closeForm()">Cancel</button>
+                              </form>
+                            </div>
+                          </div>
+                    </div>     
+                  </template>
+
+            </div> 
+            
+            
+            <div class="social-links">
+                <a href="https://facebook.com/icaminajatt" target=_blank><img src="../media/facebook-app-symbol.png"></a>
+                <a href="https://twitter.com/Jathynelaaa/" target=_blank><img src="../media/twitter.png"></a>
+                <a href="https://instagram.com/jathynelaaa/" target=_blank><img src="../media/instagram-logo.png"></a>
+                <a href="https://linkedin.com/in/jatticamina" target=_blank><img src="../media/linkedin.png"></a>
+            </div>
+
+
+        </div>
+
+        <hr>
+
+        <footer>
+            <a href="mailto:jatt.icamina@whitecloak.com">&#169 jatt.icamina@whitecloak.com</a>
+        </footer>
+
+        <script src="../js/script.js"></script>
+        
+
+    </body>
+
+</html>
