@@ -435,7 +435,7 @@ nav ul a:hover {
     }
 
     .comments {
-        width: 90%;
+        width: 100%;
         border-radius: 0px;
         padding-left: 0;
         background-color:transparent;
@@ -824,11 +824,11 @@ input[type=submit]:hover {
     display: none;
     /* position: fixed; */
     position: absolute;
-    width: 50%;
+    width: 100%;
     left: 30%;
     top: 5%;
     /* bottom: 5%; */
-    transform: translate(-5%, -2%);
+    transform: translate(-30%, -50%);
     border: 3px solid #999999;
     box-shadow: #44546a;
     z-index: 9;
