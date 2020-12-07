@@ -468,6 +468,16 @@ nav ul a:hover {
         padding-bottom: 20px;
         background-color: #f2f2f2;
       }
+
+      textarea {
+        width: 100%;
+        text-align: center;
+    }
+    
+    input[type=text], select {
+        width:100%;
+        text-align: center;
+    }
     
 } 
 
@@ -954,7 +964,7 @@ input[type=text], select {
     left: 30%;
     top: 5%;
     /* bottom: 5%; */
-    transform: translate(-5%, -2%);
+    transform: translate(-10%);
     border: 3px solid #999999;
     box-shadow: #44546a;
     z-index: 9;
@@ -1130,4 +1140,221 @@ input[type=text], select {
     /* display: flex; */
     align-items: center;
     justify-content: space-around;
+} 
+
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 700px) {
+    
+    nav ul {
+        width: 100%;
+        background: linear-gradient(#04365f, #0195c2);
+        position: absolute;
+        top: 110px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    nav ul li a{
+        color: #fff; 
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .row {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-2 .me {
+        width: 77%;
+    }
+    
+    .color-box {
+        transform: translateX(75px);
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+    }
+
+    .col-1 h1 {
+        font-size: 15px;
+    }
+    .col-1 h2 {
+        font-size: 35px;
+    }
+
+    .col-1 p {
+        font-size: 20px;
+    }
+
+    /* ABOUT */
+
+    .about-col-2 {
+        margin-bottom: 20px;
+    }
+
+    .aboutMe .pic {
+        width: 100;
+        text-align: center;
+    }
+
+    .aboutRow {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .disp-info h2 {
+        text-align: justify;
+    }
+
+    .disp-pic {
+        margin-top: 0;
+    }
+    .info-row{
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 130%;
+    }
+    .skills-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: small;
+    }
+
+    /* educ */
+
+    #boxes .box {
+        float:none;
+        text-align:center;
+        width:100%;
+    }
+
+    /* work */
+    .work-col-2 {
+        margin-bottom: 20px;
+    }
+
+    .workMe .pic {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .workRow {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    /* fun facts */
+    .fun-col-2 {
+        margin-bottom: 20px;
+    }
+
+    .funMe .pic {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .funRow {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    /* likes */
+
+    .like-col-2 {
+        margin-bottom: 20px;
+    }
+
+    .likeMe .pic {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .likeMe {
+        width: 100%;
+    }
+    .likeRow {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    
+    .title::after {
+        display: none;
+        }
+
+    /* MORE INFO */
+    .add .pic {
+        width: 100%;
+        text-align: center;
+    }
+
+    .comments {
+        width: 100%;
+        border-radius: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #f2f2f2;
+    }
+
+    .comments h3 {
+        margin-top: 0px;
+    }
+    input[type=text], select {
+        width: 100%;
+    }
+
+    #test-pic {
+        display: block;
+    }
+    
+    .formPopup {
+        display: none;
+        position: fixed;
+        width: 70%;
+        left: 30%;
+        top: 5%;
+        transform: translate(-22%);
+        border: 3px solid #999999;
+        box-shadow: #44546a;
+        z-index: 9;
+      }
+    
+      .formContainer {
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #f2f2f2;
+      }
+
+      textarea {
+        width: 100%;
+        text-align: center;
+    }
+    
 } 
